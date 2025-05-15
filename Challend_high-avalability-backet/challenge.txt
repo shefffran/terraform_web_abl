@@ -1,0 +1,15 @@
+Hayk jan barev.
+
+Let's start configuring terraform with aws s3 bucket as backend for state and lock.
+I want to have a website with high-availability in us-east-1a and us-east-1b. Pick up any domain you want for testing, it should be a valid and public domain.
+
+Then, let's create
+* VPC
+* 1 public and 2 private subnets
+* EC2 with 2 x t3a.micro instances inside private subnet
+***** EC2 instances should be having nginx installed and configured through UserData automatically when the server is first booted
+* 1 x ALB with SSL certificate by using ACM - take any domain you want
+* ALB target group should be pointing to EC2 instances
+When all above is ready, you need to configure DNS to point your website to ALB.
+
+Let me know if you have any questions.sz
